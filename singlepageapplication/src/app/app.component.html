@@ -1,0 +1,28 @@
+<div>
+  <form (ngSubmit)="onSubmit()" [formGroup]="form">
+
+    <input type="text" placeholder="Search here"/>
+    </form>
+</div>
+<table>
+  <thead>
+    <tr>
+        <th>ID</th>
+        <th>Full Name</th>
+        <th>User Name</th>
+        <th>Email</th>
+        <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let entry of entries">
+        <td>{{entry.id}}</td>
+        <td>{{entry.fullname}}</td>
+        <td>{{entry.userName}}</td>
+        <td>{{entry.email}}</td>
+        <td><a href="#">Edit</a> <a href="#">Delete</a></td>
+    </tr>
+</tbody>
+</table>
+
+<router-outlet></router-outlet>
